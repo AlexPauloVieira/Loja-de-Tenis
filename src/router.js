@@ -1,11 +1,12 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Feather } from '@expo/vector-icons';
 
 import Home from './pages/Home';
 import Detail from './pages/Detail';
+import Test from './pages/Test';
 
 const Stack = createStackNavigator();
 
@@ -32,6 +33,10 @@ function Routes() {
                             </TouchableOpacity>
                         )
                     }}
+                />
+                <Stack.Screen
+                    name="Test"
+                    component={Test}
                 />
             </Stack.Navigator>
         </NavigationContainer>

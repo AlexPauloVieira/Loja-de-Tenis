@@ -44,9 +44,13 @@ export default function Home() {
                 </View>
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-                    <Shoes img={require('../../assets/3.png')} cost="R$560,90" onClick={() => alert('CLICOU')}>
+                    <Shoes
+                        img={require('../../assets/3.png')}
+                        cost="R$560,90"
+                        onClick={() => navigation.navigate('Test')}>
                         Nike Squidward Tentacles
                     </Shoes>
+
                     <Shoes img={require('../../assets/4.png')} cost="R$220,00" onClick={() => alert('CLICOU')}>
                         Nike Epic React Flyknit 2
                     </Shoes>
