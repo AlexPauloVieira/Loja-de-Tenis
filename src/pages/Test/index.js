@@ -106,11 +106,12 @@ const styles = StyleSheet.create({
         paddingVertical: 30,
         alignItems: 'center',
         justifyContent: 'space-around',
-        backgroundColor: 'blue',
+        backgroundColor: '#203e5f',
         backfaceVisibility: 'hidden',
+        borderRadius: 50
     },
     flipCardBack: {
-        backgroundColor: "red",
+        backgroundColor: "#ffcc00",
         position: "absolute",
         top: 0,
     },
@@ -120,6 +121,9 @@ const styles = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
     },
+    image: {
+        borderRadius: 40
+    }
 });
 
 AppRegistry.registerComponent('animatedbasic', () => animatedbasic);
