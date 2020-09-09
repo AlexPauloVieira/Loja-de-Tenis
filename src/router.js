@@ -5,7 +5,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Feather } from '@expo/vector-icons';
 
 import Home from './pages/Home';
+import HomeTest from './pages/HomeTest';
 import Detail from './pages/Detail';
+import DetailTest from './pages/DetailTest';
 import Test from './pages/Test';
 
 const Stack = createStackNavigator();
@@ -37,6 +39,14 @@ function Routes() {
                 <Stack.Screen
                     name="Test"
                     component={Test}
+                />
+                <Stack.Screen
+                    name="HomeTest"
+                    component={HomeTest}
+                />
+                <Stack.Screen
+                    name="DetailTest"
+                    component={DetailTest}
                 />
             </Stack.Navigator>
         </NavigationContainer>

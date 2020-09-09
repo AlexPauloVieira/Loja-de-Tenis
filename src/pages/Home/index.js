@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -51,13 +51,21 @@ export default function Home() {
                         Nike Squidward Tentacles
                     </Shoes>
 
-                    <Shoes img={require('../../assets/4.png')} cost="R$220,00" onClick={() => alert('CLICOU')}>
+                    <Shoes
+                        img={require('../../assets/4.png')}
+                        cost="R$220,00"
+                        onClick={() => navigation.navigate('HomeTest')}
+                    >
                         Nike Epic React Flyknit 2
                     </Shoes>
                 </View>
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-                    <Shoes img={require('../../assets/5.png')} cost="R$120,90" onClick={() => alert('CLICOU')}>
+                    <Shoes
+                        img={require('../../assets/5.png')}
+                        cost="R$120,90"
+                        onClick={() => navigation.navigate('DetailTest')}
+                    >
                         Nike Joyrida Run
                     </Shoes>
                     <Shoes img={require('../../assets/6.png')} cost="R$580" onClick={() => alert('CLICOU')}>

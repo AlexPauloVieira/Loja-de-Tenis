@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, Image, StyleSheet, FlatList } from 'react-native';
 
 export default function Shoes(props) {
+
     function filterDesc(desc) {
         if (desc.length < 24) {
             return desc;
@@ -23,7 +24,7 @@ export default function Shoes(props) {
                 <Text style={styles.shoesText}>{props.cost}</Text>
             </View>
         </TouchableOpacity>
-    )
+    );
 }
 
 const styles = StyleSheet.create({

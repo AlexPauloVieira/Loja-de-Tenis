@@ -73,19 +73,34 @@ export default class animatedbasic extends Component {
                     <TouchableOpacity onPress={() => this.flipCard()}>
 
                         <Animated.View style={[styles.flipCard, frontAnimatedStyle, { opacity: this.frontOpacity }]}>
+                            <FontAwesome5 name='question' color='#ffcc00' size={64} />
                             <Text style={styles.flipText}>
-                                This text is flipping on the front.
+                                Complete o desafio
                             </Text>
-                            <FontAwesome5 name='user' color='#000' size={66} />
                         </Animated.View>
                         <Animated.View style={[styles.flipCard, styles.flipCardBack, backAnimatedStyle, { opacity: this.backOpacity }]}>
-                            <Text style={styles.flipText}>
-                                This text is flipping on the back.
+                            <Text style={styles.flipTextBack}>
+                                Parabéns vc é demais!
                             </Text>
-                            <Image
-                                source={require('../../assets/1.png')}
-                                style={styles.image}
-                            />
+                            <FontAwesome5 name='trophy' color='#203e5f' size={64} />
+                        </Animated.View>
+                    </TouchableOpacity>
+                </View>
+                {/* 2 card */}
+                <View>
+                    <TouchableOpacity onPress={() => this.flipCard()}>
+
+                        <Animated.View style={[styles.flipCard, frontAnimatedStyle, { opacity: this.frontOpacity }]}>
+                            <FontAwesome5 name='question' color='#ffcc00' size={64} />
+                            <Text style={styles.flipText}>
+                                Complete o desafio
+                            </Text>
+                        </Animated.View>
+                        <Animated.View style={[styles.flipCard, styles.flipCardBack, backAnimatedStyle, { opacity: this.backOpacity }]}>
+                            <Text style={styles.flipTextBack}>
+                                Parabéns vc é demais!
+                            </Text>
+                            <FontAwesome5 name='trophy' color='#203e5f' size={64} />
                         </Animated.View>
                     </TouchableOpacity>
                 </View>
@@ -97,18 +112,20 @@ export default class animatedbasic extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
+        flexDirection: 'row',
+        alignItems: "flex-start",
+        justifyContent: "space-evenly",
     },
     flipCard: {
-        width: 300,
-        height: 400,
-        paddingVertical: 30,
+        width: 160,
+        height: 200,
+        marginTop: 20,
+        paddingVertical: 10,
         alignItems: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
         backgroundColor: '#203e5f',
         backfaceVisibility: 'hidden',
-        borderRadius: 50
+        borderRadius: 20
     },
     flipCardBack: {
         backgroundColor: "#ffcc00",
@@ -116,10 +133,19 @@ const styles = StyleSheet.create({
         top: 0,
     },
     flipText: {
-        width: 90,
-        fontSize: 20,
-        color: 'white',
+        fontSize: 16,
+        color: '#ffcc00',
+        textTransform: 'uppercase',
         fontWeight: 'bold',
+        textAlign: 'center'
+    },
+    flipTextBack: {
+        width: 120,
+        fontSize: 14,
+        color: '#203e5f',
+        textTransform: 'uppercase',
+        fontWeight: 'bold',
+        textAlign: 'center'
     },
     image: {
         borderRadius: 40
