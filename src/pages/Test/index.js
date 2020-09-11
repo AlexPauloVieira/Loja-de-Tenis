@@ -69,7 +69,8 @@ export default class animatedbasic extends Component {
 
         return (
             <View style={styles.container}>
-                <View>
+
+                <View >
                     <TouchableOpacity onPress={() => this.flipCard()}>
 
                         <Animated.View style={[styles.flipCard, frontAnimatedStyle, { opacity: this.frontOpacity }]}>
@@ -104,6 +105,7 @@ export default class animatedbasic extends Component {
                         </Animated.View>
                     </TouchableOpacity>
                 </View>
+
             </View>
         );
     }

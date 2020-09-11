@@ -64,7 +64,7 @@ export default function Home() {
                     <Shoes
                         img={require('../../assets/5.png')}
                         cost="R$120,90"
-                        onClick={() => navigation.navigate('DetailTest')}
+                        onClick={() => navigation.navigate('AnimationTest')}
                     >
                         Nike Joyrida Run
                     </Shoes>

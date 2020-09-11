@@ -9,6 +9,7 @@ import HomeTest from './pages/HomeTest';
 import Detail from './pages/Detail';
 import DetailTest from './pages/DetailTest';
 import Test from './pages/Test';
+import AnimationTest from './pages/AnimationTest';
 
 const Stack = createStackNavigator();
 
@@ -43,6 +44,10 @@ function Routes() {
                 <Stack.Screen
                     name="HomeTest"
                     component={HomeTest}
+                />
+                <Stack.Screen
+                    name="AnimationTest"
+                    component={AnimationTest}
                 />
                 <Stack.Screen
                     name="DetailTest"
