@@ -1,7 +1,7 @@
 //https://github.com/react-native-community/lottie-react-native/blob/master/docs/api.md
 
-import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import React, { useState } from 'react'
+import { View, StyleSheet, TouchableOpacity, Image } from 'react-native'
 
 import LottieView from 'lottie-react-native';
 
@@ -23,6 +23,11 @@ import man from '../../assets/animation/man.json';
 
 
 export default function AnimationTest() {
+    const [animation, setAnimation] = useState(false);
+
+    function handleClickedAnimation() {
+        setAnimation(!animation);
+    }
 
     return (
         <View style={styles.container}>
@@ -41,21 +46,35 @@ export default function AnimationTest() {
                 />
             </View>
             <View style={styles.animationCard}>
-                <LottieView
-                    autoPlay
-                    speed={0.4} //speed negativo inverte a ordem da animação
-                    loop
-                    style={{
-                        width: 100,
-                        height: 100,
-                        backgroundColor: '#e8e8e8',
-                    }}
-                    source={nice}
-                    resizeMode='cover'
-                />
+                <TouchableOpacity
+                    onPress={handleClickedAnimation}
+                >
+                    {!animation && (
+                        <Image
+                            source={require('../../assets/punch.png')}
+                            style={{
+                                width: 200,
+                                height: 200
+                            }}
+                        />)
+                    }
+                    {animation && (<LottieView
+                        autoPlay
+                        speed={1} //speed negativo inverte a ordem da animação
+                        loop={false}
+                        style={{
+                            width: 200,
+                            height: 200
+                        }}
+                        source={nice}
+                        resizeMode='cover'
+                    />)}
+                </TouchableOpacity>
             </View>
         </View>
     )
+
+
 }
 
 const styles = StyleSheet.create({
@@ -67,8 +86,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#e8e8e8'
     },
     animationCard: {
-        backgroundColor: '#fff',
+        backgroundColor: '#e8e8e8',
         borderRadius: 25,
-        marginTop: 10
+        marginTop: 10,
     }
 });
